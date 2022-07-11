@@ -10,19 +10,19 @@ import static org.junit.Assert.*;
 public class BishopBlackTest {
 
     @Test
-    public void Position() {
+    public void testPosition() {
         BishopBlack bp = new BishopBlack(Cell.C1);
         assertThat(bp.position(), is(Cell.C1));
     }
 
     @Test
-    public void Way() {
+    public void testWay() {
         BishopBlack bp = new BishopBlack(Cell.C1);
         assertThat(bp.way(Cell.G5), is(new Cell[] {Cell.D2, Cell.E3, Cell.F4, Cell.G5}));
     }
 
     @Test
-    public void Copy() {
+    public void testCopy() {
         Figure bp = new BishopBlack(Cell.A1);
         Figure bp2 = bp.copy(Cell.B2);
         assertThat(bp2.position(), is(Cell.B2));
